@@ -1,6 +1,7 @@
-###This repository contains sample code and exercises from the book "Learn PowerShell in a Month of Lunches, Fourth Edition" by Don Jones and Jeffery Hicks.
+# This repository contains sample code and exercises from the book "Learn PowerShell in a Month of Lunches, Fourth Edition" by Don Jones and Jeffery Hicks.
+## Welcome to my repository for learning PowerShell!
 
-This repository was created as a way for me to document my journey through the book **"Learn PowerShell in a Month of Lunches, Fourth Edition." **As I work through the lessons and practice using PowerShell.
+This repository was created as a way for me to document my journey through the book **"Learn PowerShell in a Month of Lunches, Fourth Edition."** As I work through the lessons and practice using PowerShell.
 
 One of my main goals in creating this repository is to become proficient in PowerShell. As a developer, DevOps engineer, or cloud engineer, it is essential to have a strong understanding of this powerful language.
 
