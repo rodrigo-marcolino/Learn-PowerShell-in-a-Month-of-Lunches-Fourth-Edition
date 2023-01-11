@@ -2,8 +2,8 @@
 ## Welcome to my repository for learning PowerShell! <br/>
 
 >This repository was created as a way for me to document my journey through the book **"Learn PowerShell in a Month of Lunches, Fourth Edition."** As I work through the lessons and practice using PowerShell. 
-<br/>
-<br/>
+
+
 
 **Goal** 
 ------
