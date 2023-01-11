@@ -5,8 +5,9 @@
 <br/>
 <br/>
 
-**Goal**
+**Goal** 
 ------
+
 Become proficient in PowerShell. As a developer, DevOps, or cloud engineer, it is essential to have a strong understanding of this powerful language.
 
 Through this repository, I hope to share my learning experiences with PowerShell and demonstrate its importance and usefulness for others in similar roles.
