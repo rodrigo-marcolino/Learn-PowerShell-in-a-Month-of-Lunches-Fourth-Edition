@@ -93,7 +93,56 @@
    11
    ```
 
+---
 
-***
+5. What cmdlet might you use to set to a PowerShell breakpoint? (Hint: PowerShell-specific nouns are often prefixed with PS.)
 
-5. 
+   ```powershell
+   Get-Command -Noun Process
+   ```
+
+   `output:`
+
+   ```
+   CommandType     Name                                               Version    Source
+   -----------     ----                                               -------    ------
+   Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
+   Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
+   Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
+   Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+   Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+   ```
+
+   To count the number of cmdlets available we can pipe the output to the `Measure-Object` cmdlet and specify the `-Line` parameter.
+
+   ```powershell
+   Get-Command *breakpoint
+   ```
+
+   `output:`
+
+   ```
+   CommandType     Name    Version    Source
+   -----------     ----    -------    ------
+   Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
+   Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
+   Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
+   Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
+   Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
+   ```
+
+   It seems that the command is `Set-PSBreakpoint`
+
+   ```powershell
+   help Set-PSBreakpoint
+   ```
+
+   `output:`
+
+   ```
+   NAME
+    Set-PSBreakpoint
+
+   SYNOPSIS
+    Sets a breakpoint on a line, command, or variable.
+   ```
