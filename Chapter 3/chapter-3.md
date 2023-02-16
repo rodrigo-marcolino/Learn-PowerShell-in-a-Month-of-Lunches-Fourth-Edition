@@ -167,3 +167,33 @@ Cmdlet          New-Alias                                          3.1.0.0    Mi
 Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
 ```
 
+---
+
+### 7. Is there a way to keep a transcript of everything you type in the shell, and save that transcript to a text file?
+
+```powershell
+Get-Command -noun  transcript
+```
+
+`output:`
+
+```
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerShell.Host
+Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerShell.Host
+```
+
+You can create a new transcript file named "transcript.txt" in the C:\ directory, and any commands you type in the PowerShell prompt will be saved to this file.
+
+```powershell
+Start-Transcript -Path C:\transcript.txt
+```
+
+When you're done, use the command `Stop-Transcript` to stop the transcript and save it to the file.
+
+```powershell
+Stop-Transcript
+```
+
+---
