@@ -283,3 +283,14 @@ Help Out-File –Parameter Width
 ```
 
 ---
+
+### 12. By default, Out-File overwrites any existing file that has the same filename as what you specify. Is there a parameter that would prevent the cmdlet from overwriting an existing file?
+
+```powershell
+Get-Process | Out-File -FilePath "C:\Processes.txt" -NoClobber
+
+```
+
+---
+
+### 13.
