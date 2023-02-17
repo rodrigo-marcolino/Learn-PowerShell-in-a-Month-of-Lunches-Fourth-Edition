@@ -301,4 +301,71 @@ Get-Alias
 
 ---
 
-14 .
+### 14 . Using both an alias and abbreviated parameter names, what is the shortest command line you could type to retrieve a list of commands with the word process in the name?
+
+```powershell
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> Gcm -na *process*
+```
+
+`output:`
+
+```
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Start-ASRSwitchProcessServerJob                    0.2.4      AzureRM.RecoveryServices.SiteRecovery
+Function        Get-AppvVirtualProcess                             1.0.0.0    AppvClient
+Function        Start-AppvVirtualProcess                           1.0.0.0    AppvClient
+Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.12     ProcessMitigations
+Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-ComputeProcess                                 1.0.0.0    HostComputeService
+Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-ProcessMitigation                              1.0.12     ProcessMitigations
+Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-VMProcessor                                    2.0.0.0    Hyper-V
+Cmdlet          Set-ProcessMitigation                              1.0.12     ProcessMitigations
+Cmdlet          Set-VMProcessor                                    2.0.0.0    Hyper-V
+Cmdlet          Start-AzureRmRecoveryServicesAsrSwitchProcessSe... 0.2.4      AzureRM.RecoveryServices.SiteRecovery
+Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Stop-ComputeProcess                                1.0.0.0    HostComputeService
+Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+Application     qprocess.exe                                       10.0.19... C:\Windows\system32\qprocess.exe
+```
+
+---
+
+### 15. How many cmdlets are available that can deal with generic objects? (Hint: Remember to use a singular noun like object rather than a plural one like objects.)
+
+```powershell
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> Get-Command –Noun object
+```
+
+`output:`
+
+```
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
+```
+
+---
+
+### 16. This chapter briefly mentioned arrays. What help topic could tell you more about them?
+
+```powershell
+help *array*
+```
+
+---
