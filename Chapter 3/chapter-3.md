@@ -252,7 +252,7 @@ Handles      WS(K)   CPU(s)     Id UserName               ProcessName
 
 ---
 
-10. Is there a way to run a command on a remote host? (Hint: Invoke is the verb for running something now.)
+### 10. Is there a way to run a command on a remote host? (Hint: Invoke is the verb for running something now.)
 
 ```powershell
 help Invoke-Command –Parameter computername
@@ -260,4 +260,26 @@ help Invoke-Command –Parameter computername
 
 ---
 
-### 11.
+### 11. Examine the help file for the Out-File cmdlet. The files created by this cmdlet default to a width of how many characters? Is there a parameter that would enable you to change that width?
+
+```powershell
+Help Out-File –Parameter Width
+```
+
+`output:`
+
+```
+
+-Width <System.Int32>
+    Specifies the number of characters in each line of output. Any additional characters are truncated, not wrapped. If this parameter is not used, the width is determined by the
+    characteristics of the host. The default for the PowerShell console is 80 characters. If you want to control the width for all invocations of `Out-File` as well as the redirection
+    operators (`>` and `>>`), set `$PSDefaultParameterValues['out-file:width'] = 2000` before using `Out-File`.
+
+    Required?                    false
+    Position?                    named
+    Default value                None
+    Accept pipeline input?       False
+    Accept wildcard characters?  false
+```
+
+---
