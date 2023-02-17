@@ -249,3 +249,15 @@ Handles      WS(K)   CPU(s)     Id UserName               ProcessName
     710      84100     0.75   6396 DEVMACHINE\rodri       powershell
     922     292496    26.66  24920 DEVMACHINE\rodri       powershell_ise
 ```
+
+---
+
+10. Is there a way to run a command on a remote host? (Hint: Invoke is the verb for running something now.)
+
+```powershell
+help Invoke-Command –Parameter computername
+```
+
+---
+
+### 11.
