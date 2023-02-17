@@ -213,3 +213,39 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 ```
 
 ---
+
+### 9. Is there a way to tell Get-Process to tell you the user who started the process?
+
+Finding out what command to use
+
+```powershell
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> help get-process -parameter *username*
+```
+
+`output:`
+
+```
+-IncludeUserName <System.Management.Automation.SwitchParameter>
+    Indicates that the UserName value of the Process object is returned with results of the command.
+
+    Required?                    true
+    Position?                    named
+    Default value                False
+    Accept pipeline input?       False
+    Accept wildcard characters?  false
+```
+
+Testing:
+
+```powershell
+get-process -Name powershell* -IncludeUserNam
+```
+
+`output:`
+
+```
+Handles      WS(K)   CPU(s)     Id UserName               ProcessName
+-------      -----   ------     -- --------               -----------
+    710      84100     0.75   6396 DEVMACHINE\rodri       powershell
+    922     292496    26.66  24920 DEVMACHINE\rodri       powershell_ise
+```
