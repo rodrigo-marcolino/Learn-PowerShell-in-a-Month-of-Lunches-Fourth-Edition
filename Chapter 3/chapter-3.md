@@ -293,4 +293,12 @@ Get-Process | Out-File -FilePath "C:\Processes.txt" -NoClobber
 
 ---
 
-### 13.
+### 13. How could you see a list of all aliases defined in PowerShell?
+
+```powershell
+Get-Alias
+```
+
+---
+
+14 .
