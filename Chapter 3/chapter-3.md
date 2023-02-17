@@ -197,3 +197,19 @@ Stop-Transcript
 ```
 
 ---
+
+### 8. Getting all processes can be overwhelming. How can you get processes by the name of the process?
+
+```powershell
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> get-process -Name powershell
+```
+
+`output:`
+
+```
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   1039      61   193148     226600       8.59  24920   1 powershell_ise
+```
+
+---
