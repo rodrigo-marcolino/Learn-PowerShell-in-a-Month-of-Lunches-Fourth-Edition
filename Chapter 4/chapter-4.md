@@ -44,76 +44,34 @@ Get-Alias
 
 ---
 
-### 5. What cmdlet might you use to set to a PowerShell breakpoint? (Hint: PowerShell-specific nouns are often prefixed with PS.)
+### 5. Make a new alias, so you can run ntst to run netstat from a PowerShell prompt
 
 ```powershell
-Get-Command -Noun Process
-```
-
-`output:`
-
-```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-```
-
-To count the number of cmdlets available we can pipe the output to the `Measure-Object` cmdlet and specify the `-Line` parameter.
-
-```powershell
-Get-Command *breakpoint
-```
-
-`output:`
-
-```
-CommandType     Name    Version    Source
------------     ----    -------    ------
-Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-```
-
-It seems that the command is `Set-PSBreakpoint`
-
-```powershell
-help Set-PSBreakpoint
-```
-
-`output:`
-
-```
-NAME
- Set-PSBreakpoint
-
-SYNOPSIS
- Sets a breakpoint on a line, command, or variable.
+New-Alias -Name ntst -Value netstat
 ```
 
 ---
 
-### 6. You’ve learned that aliases are nicknames for cmdlets. What cmdlets are available to create, modify, export, or import aliases?
+### 6. Display a list of processes that begin with the letter p. Again, read the help for the necessary command—and don’t forget that the asterisk (\*) is a near-universal wildcard in PowerShell.
 
 ```powershell
-Get-Command -Noun alias
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> Get-Process -Name p*
 ```
 
 `output:`
 
 ```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    890      68   367608     397508      97.48  24920   1 powershell_ise
+    736      38    11592      17236      39.09   6448   1 PowerToys
+    219      12    18728       1880      72.44   8916   1 PowerToys.AlwaysOnTop
+    795      40    23092       4968      17.66   8924   1 PowerToys.Awake
+    496      62    71920      19264      47.75   8960   1 PowerToys.ColorPickerUI
+    303      20   157476       5900   1,773.30   8988   1 PowerToys.FancyZones
+    143       9    16208       1032       3.34   9012   1 PowerToys.KeyboardManagerEngine
+   1133     107   163628      20032      89.41   9052   1 PowerToys.PowerLauncher
+    236      28    25724      13772              6892   0 PresentationFontCache
 ```
 
 ---
