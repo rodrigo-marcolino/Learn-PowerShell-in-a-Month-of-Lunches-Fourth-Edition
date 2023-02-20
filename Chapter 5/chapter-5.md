@@ -16,11 +16,9 @@ PS C:\Labs> New-Item -Path C:\Labs -Name test.txt -ItemType file
 
 ---
 
-### 3. Are there any cmdlets that can redirect output into a file?
+### 3. Is it possible to use Set-Item to change the contents of /Labs/Test.txt to -TESTING? Or do you get an error? If you get an error, why?
 
-```powershell
-Get-Command -Noun file, output
-```
+It's not supported by the FileSystem
 
 `output:`
 
