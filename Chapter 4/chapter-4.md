@@ -28,37 +28,10 @@ DEVMACHINE    google.com      172.217.24.46                                     
 
 ---
 
-### 3. Are there any cmdlets that can redirect output into a file?
+### 3. Display a list of all commands that are of the cmdlet type. (This is tricky—we’ve shown you Get-Command, but you need to read the help to find out how to narrow down the list as we’ve asked.)
 
 ```powershell
-Get-Command -Noun file, output
-```
-
-`output:`
-
-```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerShell.Utility
-```
-
-After the command, I can see which command would bee.
-In this case, it seems that the command is `out-file`
-
-```powershell
-help out-file
-```
-
-`output:`
-
-```
-NAME
-Out-File
-
-SYNOPSIS
-Sends output to a file.
+Get-Command -Type cmdlet
 ```
 
 ---
