@@ -76,31 +76,40 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 
 ---
 
-### 7. Is there a way to keep a transcript of everything you type in the shell, and save that transcript to a text file?
+### 7. Make a new folder (aka directory) using the New-Item cmdlet with the name of MyFolder1. Then do it again and call it MyFolder2. Use Help if you’re not familiar with New-Item.
+
+Creating a new folder call Myfolder1.
 
 ```powershell
-Get-Command -noun  transcript
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> New-Item -Name Myfolder1 -Path c:\PowerShell -ItemType Directory
 ```
 
 `output:`
 
 ```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerShell.Host
-Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerShell.Host
+ Directory: C:\PowerShell
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        21/02/2023   6:57 am                Myfolder1
 ```
 
-You can create a new transcript file named "transcript.txt" in the C:\ directory, and any commands you type in the PowerShell prompt will be saved to this file.
+Creating a directory called Myfolder2
 
 ```powershell
-Start-Transcript -Path C:\transcript.txt
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> New-Item -Name Myfolder2 -Path c:\PowerShell -ItemType Directory
 ```
 
-When you're done, use the command `Stop-Transcript` to stop the transcript and save it to the file.
+`output:`
 
-```powershell
-Stop-Transcript
+```
+ Directory: C:\PowerShell
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        21/02/2023   6:59 am                Myfolder2
 ```
 
 ---
