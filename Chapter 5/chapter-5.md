@@ -20,65 +20,21 @@ PS C:\Labs> New-Item -Path C:\Labs -Name test.txt -ItemType file
 
 It's not supported by the FileSystem
 
-`output:`
-
-```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerShell.Utility
-```
-
-After the command, I can see which command would bee.
-In this case, it seems that the command is `out-file`
-
-```powershell
-help out-file
-```
-
-`output:`
-
-```
-NAME
-Out-File
-
-SYNOPSIS
-Sends output to a file.
-```
-
 ---
 
-### 4. How many cmdlets are available for working with processes? (Hint: Remember that cmdlets all use a singular noun.)
+### 4. Using the Environment provider, display the value of the system environment variable PATH.
 
 ```powershell
-Get-Command -Noun Process
+PS C:\Labs> Get-Item env:PATH
 ```
 
 `output:`
 
 ```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-```
 
-To count the number of cmdlets available we can pipe the output to the `Measure-Object` cmdlet and specify the `-Line` parameter.
-
-```powershell
-Get-Command *process | Measure-Object -Line
-```
-
-`output:`
-
-```
-Lines Words Characters Property
------ ----- ---------- --------
-11
+Name                           Value
+----                           -----
+Path                           C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system3...
 ```
 
 ---
