@@ -8,20 +8,10 @@ PS C:\Users\rodri.LAPTOP-UTLDGGR2> New-Item -Path c:\Labs -ItemType Directory
 
 ---
 
-### 2. Can you find any cmdlets capable of converting other cmdlets’ output into HTML?
+### 2. Create a zero-length file named /Labs/Test.txt (use New-Item).
 
 ```powershell
-help html
-```
-
-`output:`
-
-```
-NAME
- ConvertTo-Html
-
-SYNOPSIS
- Converts .NET objects into HTML that can be displayed in a Web browser.
+PS C:\Labs> New-Item -Path C:\Labs -Name test.txt -ItemType file
 ```
 
 ---
