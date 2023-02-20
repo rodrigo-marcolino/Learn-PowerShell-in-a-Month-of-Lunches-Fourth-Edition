@@ -1,9 +1,9 @@
-# 3.8 Lab
+# 5.6 Lab
 
-### 1. Run Update-Help, and ensure that it completes without errors so that you have a copy of the help on your local computer. You need an internet connection.
+### 1. Create a new directory called Labs
 
 ```powershell
-PS> update-help -force
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> New-Item -Path c:\Labs -ItemType Directory
 ```
 
 ---

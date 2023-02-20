@@ -30,4 +30,4 @@ Thank you for visiting, and I hope you find the resources in this repository hel
 
 - 3 - [Using the Help system](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%203/chapter-3.md)
 - 4 - [Running Commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%204/chapter-4.md)
-- 5 - [Working with providers]
+- 5 - [Working with providers](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%205/chapter-5.md)
