@@ -1,27 +1,29 @@
 # 4.10 Lab
 
-### 1. Run Update-Help, and ensure that it completes without errors so that you have a copy of the help on your local computer. You need an internet connection.
+### 1. Display a list of running processes.
 
 ```powershell
-PS> update-help -force
+PS> Get-Process
 ```
 
 ---
 
-### 2. Can you find any cmdlets capable of converting other cmdlets’ output into HTML?
+### 2.Test the connection to google.com or bing.com without using an external command like ping.
 
 ```powershell
-help html
+PS C:\Users\rodri.LAPTOP-UTLDGGR2> Test-Connection google.com
+
 ```
 
 `output:`
 
 ```
-NAME
- ConvertTo-Html
-
-SYNOPSIS
- Converts .NET objects into HTML that can be displayed in a Web browser.
+Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+------        -----------     -----------      -----------                              -----    --------
+DEVMACHINE    google.com      172.217.24.46                                             32       28
+DEVMACHINE    google.com      172.217.24.46                                             32       31
+DEVMACHINE    google.com      172.217.24.46                                             32       28
+DEVMACHINE    google.com      172.217.24.46                                             32       29
 ```
 
 ---
