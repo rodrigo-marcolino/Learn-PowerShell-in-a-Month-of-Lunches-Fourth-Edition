@@ -36,36 +36,10 @@ Get-Command -Type cmdlet
 
 ---
 
-### 4. How many cmdlets are available for working with processes? (Hint: Remember that cmdlets all use a singular noun.)
+### 4. Display a list of all aliases.
 
 ```powershell
-Get-Command -Noun Process
-```
-
-`output:`
-
-```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-```
-
-To count the number of cmdlets available we can pipe the output to the `Measure-Object` cmdlet and specify the `-Line` parameter.
-
-```powershell
-Get-Command *process | Measure-Object -Line
-```
-
-`output:`
-
-```
-Lines Words Characters Property
------ ----- ---------- --------
-11
+Get-Alias
 ```
 
 ---
