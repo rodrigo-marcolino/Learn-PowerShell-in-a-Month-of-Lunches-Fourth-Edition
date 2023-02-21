@@ -98,53 +98,35 @@ Lines Words Characters Property
 ### 5. What cmdlet might you use to set to a PowerShell breakpoint? (Hint: PowerShell-specific nouns are often prefixed with PS.)
 
 ```powershell
-Get-Command -Noun Process
+PS C:\Labs> help *breakpoint
 ```
 
 `output:`
 
 ```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Disable-PSBreakpoint              Cmdlet    Microsoft.PowerShell.U... Disables the breakpoints in the current console.
+Enable-PSBreakpoint               Cmdlet    Microsoft.PowerShell.U... Enables the breakpoints in the current console.
+Get-PSBreakpoint                  Cmdlet    Microsoft.PowerShell.U... Gets the breakpoints that are set in the current se...
+Remove-PSBreakpoint               Cmdlet    Microsoft.PowerShell.U... Deletes breakpoints from the current console.
+Set-PSBreakpoint                  Cmdlet    Microsoft.PowerShell.U... Sets a breakpoint on a line, command, or variable.
 ```
 
-To count the number of cmdlets available we can pipe the output to the `Measure-Object` cmdlet and specify the `-Line` parameter.
+The command must be `Set-PSBreakpoint `
 
 ```powershell
-Get-Command *breakpoint
-```
-
-`output:`
-
-```
-CommandType     Name    Version    Source
------------     ----    -------    ------
-Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-```
-
-It seems that the command is `Set-PSBreakpoint`
-
-```powershell
-help Set-PSBreakpoint
+PS C:\Labs> help Set-PSBreakpoint
 ```
 
 `output:`
 
 ```
 NAME
- Set-PSBreakpoint
+    Set-PSBreakpoint
 
 SYNOPSIS
- Sets a breakpoint on a line, command, or variable.
+    Sets a breakpoint on a line, command, or variable.
 ```
 
 ---
