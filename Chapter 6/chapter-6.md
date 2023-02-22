@@ -1,9 +1,21 @@
-# 5.6 Lab
+# 6.7 Lab
 
-### 1. Create a new directory called Labs
+### 1. Create two similar, but different, text files. Try comparing them by using `Compare-Object`. </br>Run something like this: `Compare-Object -Reference (Get-Content File1.txt) -Difference (Get-Content File2.txt)`. </br>If the files have only one line of text that’s different, the command should work.
 
 ```powershell
-PS C:\Users\rodri.LAPTOP-UTLDGGR2> New-Item -Path c:\Labs -ItemType Directory
+PS C:\Labs> "file number 1" | out-file MyFile1.txt
+PS C:\Labs> "file number 2" | out-file MyFile2.txt
+PS C:\Labs> Compare-Object .\MyFile1.txt .\MyFile2.txt
+```
+
+`output:`
+
+```
+
+InputObject   SideIndicator
+-----------   -------------
+.\MyFile2.txt =>
+.\MyFile1.txt <=
 ```
 
 ---
