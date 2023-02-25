@@ -67,3 +67,19 @@ PS C:\Labs> Get-Process | Export-Csv processDetails.csv  -IncludeTypeInformation
 ```
 
 ---
+
+### 6. Export-Clixml and Export-CSV both modify the system because they can create and overwrite files. </br> What parameter would prevent them from overwriting an existing file? </br> What parameter would ask whether you were sure before proceeding to write the output file?
+
+&nbsp;
+
+You can use the `Compare-Object` parameter. This parameter prevents the cmdlets from overwriting an existing file with the same name as the output file.
+</br>If the file already exists, the cmdlets will generate an error message instead of overwriting the file.
+
+```powershell
+PS C:\Labs> Get-Process | Export-Csv process.csv -NoClobber
+```
+
+&nbsp;
+Note that the -Confirm parameter is not available for `Export-Clixml`. However, you can use the `-WhatIf` parameter instead.
+
+---
