@@ -20,45 +20,50 @@ InputObject   SideIndicator
 
 ---
 
-### 2. Create a zero-length file named /Labs/Test.txt (use New-Item).
+### 2. What happens if you run Get-Command | Export-CSV commands.CSV | Out-File from the console? Why does that happen?
 
 ```powershell
 PS C:\Labs> New-Item -Path C:\Labs -Name test.txt -ItemType file
-```
-
----
-
-### 3. Is it possible to use Set-Item to change the contents of /Labs/Test.txt to -TESTING? Or do you get an error? If you get an error, why?
-
-It's not supported by the FileSystem
-
----
-
-### 4. Using the Environment provider, display the value of the system environment variable PATH.
-
-```powershell
-PS C:\Labs> Get-Item env:PATH
 ```
 
 `output:`
 
 ```
 
-Name                           Value
-----                           -----
-Path                           C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system3...
+Out-File : Cannot process argument because the value of argument "path" is null. Change the value of argument "path" to a
+non-null value.
+At line:1 char:41
++ Get-Command | Export-CSV commands.CSV | Out-File
++                                         ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
 ```
 
 ---
 
-### 5. Use help to determine what the differences are between the -Filter, -Include, and -Exclude parameters of Get-ChildItem.
-
-Getting the full documentation for Get-ChildItem
+### 3. Apart from getting one or more jobs and piping them to Stop-Job, what other means does Stop-Job provide for you </br>to specify the job or jobs you want to stop? Is it possible to stop a job without using Get-Job at all?
 
 ```powershell
-get-help Get-ChildItem -Detailed
+PS Stop-job Name
 ```
 
-`-Filter:`Is applied before the command retrieves the items.  
-`-Include:`Specifies the items to include in the output. Is applied after the command retrieves the items.  
-`-Include:`Specifies the items to exclude from output.
+---
+
+### 4. What if you want to create a pipe-delimited file instead of a CSV file? You’d still use the Export-CSV command, but what parameters would you specify?
+
+```powershell
+PS C:\Labs> get-process| Export-CSV process.CSV -Delimiter "|"
+```
+
+---
+
+### 5. How do you include the type information in the # comment line at the top of an exported CSV file?
+
+</br>
+It doesn't work in PS 5.1
+
+```powershell
+PS C:\Labs> Get-Process | Export-Csv processDetails.csv  -IncludeTypeInformation
+```
+
+---
