@@ -83,3 +83,9 @@ PS C:\Labs> Get-Process | Export-Csv process.csv -NoClobber
 Note that the -Confirm parameter is not available for `Export-Clixml`. However, you can use the `-WhatIf` parameter instead.
 
 ---
+
+### 7. The operating system maintains several regional settings, which include a default list separator. </br> On US systems, that separator is a comma. How can you tell Export-CSV to use the system’s default separator rather than a comma?
+
+```powershell
+PS C:\Labs> Get-Process | Export-Csv process.csv  -UseCulture
+```
