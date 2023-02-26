@@ -175,11 +175,9 @@ Mode                 LastWriteTime         Length Name
 ### 6. Compress-Archive ~/TestFolder/\* -DestinationPath ~/TestFolder.zip
 
 ```powershell
-PS C:\Labs> Get-Process | Export-Csv process.csv -NoClobber
+PS C:\Labs> Compress-Archive ~/TestFolder/* -DestinationPath ~/TestFolder.zip
 ```
 
-&nbsp;
-Note that the -Confirm parameter is not available for `Export-Clixml`. However, you can use the `-WhatIf` parameter instead.
 
 ---
 
