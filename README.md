@@ -29,3 +29,4 @@ Thank you for visiting, and I hope you find the resources in this repository hel
 - 4 - [Running Commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%204/chapter-4.md)
 - 5 - [Working with providers](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%205/chapter-5.md)
 - 6 - [The Pipeline: Connecting Commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%206/chapter-6.md)
+- 7 - [Adding commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%207/chapter-7.md)
