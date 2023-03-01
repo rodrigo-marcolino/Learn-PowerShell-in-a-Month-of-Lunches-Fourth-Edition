@@ -1,6 +1,7 @@
-# 7.7 Lab
+# 8.10 Lab
 
-### 1. Browse the PowerShell Gallery. Find a module or two that you think sounds interesting and install it.
+### 1. Identify a cmdlet that produces a random number.
+
 
 ```powershell
 PS C:\Labs> Install-Module -Name ConnectWiseAutomateAgent
