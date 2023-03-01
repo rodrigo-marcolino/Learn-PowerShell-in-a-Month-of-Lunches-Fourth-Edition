@@ -10,7 +10,7 @@ Install-Module -Name PSLANScan
 
 ---
 
-### 2. Browse the available commands for the module you just downloaded.
+### 2. Identify a cmdlet that displays the current date and time.
 
 ```powershell
 get-command -Module ConnectWiseAutomateAgent
