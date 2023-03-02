@@ -31,3 +31,4 @@ Thank you for visiting, and I hope you find the resources in this repository hel
 - 6 - [The Pipeline: Connecting Commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%206/chapter-6.md)
 - 7 - [Adding commands](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%207/chapter-7.md)
 - 8 - [Objects: Data by another name](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%208/chapter-8.md)
+- 9 - [Practical Interlude](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%209/chapter-9.md)
