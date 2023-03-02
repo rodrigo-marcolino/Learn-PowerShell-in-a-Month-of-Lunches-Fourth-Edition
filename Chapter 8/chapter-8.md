@@ -59,22 +59,28 @@ Thursday, 2 March 2023 10:38:25 pm
 
 ---
 
-### 3. Use the commands from section 7.2 to find and install (if needed) the latest-version module by Microsoft for working with archives that contain the command `Compress-Archive`.
+### What type of object does the cmdlet from task 2 produce? (What is the TypeName of the object produced by the cmdlet?)
 
 ```powershell
-Find-Module -Command Compress-Archive | Install-Module -Force
+PS C:\Labs> Get-Date | gm
+```
 
+`output`
+
+```
+TypeName: System.DateTime
+
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
 ```
 
 ---
 
 ### 4. Import the module you just installed.
 
-&nbsp;
-First, List all modules to see the full name of the module.
-
 ```powershell
-PS C:\Labs> Get-Module
+&nbsp;
 ```
 
 `output:`
