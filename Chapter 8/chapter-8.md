@@ -30,8 +30,11 @@ PS C:\Labs> Get-Random
 
 ### 2. Identify a cmdlet that displays the current date and time.
 
+</br>
+Finding out the command.
+
 ```powershell
-get-command -Module ConnectWiseAutomateAgent
+PS C:\Labs> Get-Command  -Verb get -Noun *date*
 ```
 
 `output:`
@@ -40,71 +43,18 @@ get-command -Module ConnectWiseAutomateAgent
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Alias           ConvertFrom-LTSecurity                             0.1.2.0    ConnectWiseAutomateAgent
-Alias           ConvertTo-LTSecurity                               0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTErrors                                       0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTLogging                                      0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTProbeErrors                                  0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTProxy                                        0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTServiceInfo                                  0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTServiceInfoBackup                            0.1.2.0    ConnectWiseAutomateAgent
-Alias           Get-LTServiceSettings                              0.1.2.0    ConnectWiseAutomateAgent
-Alias           Hide-LTAddRemove                                   0.1.2.0    ConnectWiseAutomateAgent
-Alias           Install-LTService                                  0.1.2.0    ConnectWiseAutomateAgent
-Alias           Invoke-LTServiceCommand                            0.1.2.0    ConnectWiseAutomateAgent
-Alias           New-LTServiceBackup                                0.1.2.0    ConnectWiseAutomateAgent
-Alias           Redo-LTService                                     0.1.2.0    ConnectWiseAutomateAgent
-Alias           Reinstall-CWAA                                     0.1.2.0    ConnectWiseAutomateAgent
-Alias           Reinstall-LTService                                0.1.2.0    ConnectWiseAutomateAgent
-Alias           Rename-LTAddRemove                                 0.1.2.0    ConnectWiseAutomateAgent
-Alias           Reset-LTService                                    0.1.2.0    ConnectWiseAutomateAgent
-Alias           Restart-LTService                                  0.1.2.0    ConnectWiseAutomateAgent
-Alias           Set-LTLogging                                      0.1.2.0    ConnectWiseAutomateAgent
-Alias           Set-LTProxy                                        0.1.2.0    ConnectWiseAutomateAgent
-Alias           Show-LTAddRemove                                   0.1.2.0    ConnectWiseAutomateAgent
-Alias           Start-LTService                                    0.1.2.0    ConnectWiseAutomateAgent
-Alias           Stop-LTService                                     0.1.2.0    ConnectWiseAutomateAgent
-Alias           Test-LTPorts                                       0.1.2.0    ConnectWiseAutomateAgent
-Alias           Uninstall-LTService                                0.1.2.0    ConnectWiseAutomateAgent
-Alias           Update-LTService                                   0.1.2.0    ConnectWiseAutomateAgent
-Function        ConvertFrom-CWAASecurity                           0.1.2.0    ConnectWiseAutomateAgent
-Function        ConvertTo-CWAASecurity                             0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAAError                                      0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAAInfo                                       0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAAInfoBackup                                 0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAALogLevel                                   0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAAProbeError                                 0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAAProxy                                      0.1.2.0    ConnectWiseAutomateAgent
-Function        Get-CWAASettings                                   0.1.2.0    ConnectWiseAutomateAgent
-Function        Hide-CWAAAddRemove                                 0.1.2.0    ConnectWiseAutomateAgent
-Function        Install-CWAA                                       0.1.2.0    ConnectWiseAutomateAgent
-Function        Invoke-CWAACommand                                 0.1.2.0    ConnectWiseAutomateAgent
-Function        New-CWAABackup                                     0.1.2.0    ConnectWiseAutomateAgent
-Function        Redo-CWAA                                          0.1.2.0    ConnectWiseAutomateAgent
-Function        Rename-CWAAAddRemove                               0.1.2.0    ConnectWiseAutomateAgent
-Function        Reset-CWAA                                         0.1.2.0    ConnectWiseAutomateAgent
-Function        Restart-CWAA                                       0.1.2.0    ConnectWiseAutomateAgent
-Function        Set-CWAALogLevel                                   0.1.2.0    ConnectWiseAutomateAgent
-Function        Set-CWAAProxy                                      0.1.2.0    ConnectWiseAutomateAgent
-Function        Show-CWAAAddRemove                                 0.1.2.0    ConnectWiseAutomateAgent
-Function        Start-CWAA                                         0.1.2.0    ConnectWiseAutomateAgent
-Function        Stop-CWAA                                          0.1.2.0    ConnectWiseAutomateAgent
-Function        Test-CWAAPort                                      0.1.2.0    ConnectWiseAutomateAgent
-Function        Uninstall-CWAA                                     0.1.2.0    ConnectWiseAutomateAgent
-Function        Update-CWAA                                        0.1.2.0    ConnectWiseAutomateAgent
+Function        Get-WindowsUpdateLog                               1.0.0.0    WindowsUpdate
+Cmdlet          Get-Date                                           7.0.0.0    Microsoft.PowerShell.Utility
 ```
 
 ```powershell
-PS C:\Labs> Get-Command -module PSLANScan
+PS C:\Labs> Get-Date
 ```
 
 `output`
 
 ```
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Function        Find-LANHosts                                      1.2.0      PSLANScan
-Function        Get-IPs                                            1.2.0      PSLANScan
+Thursday, 2 March 2023 10:38:25 pm
 ```
 
 ---
