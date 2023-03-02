@@ -115,50 +115,54 @@ DayOfWeek
 
 ---
 
-### 5. Create a Tests folder for the next step with 10 files in it, and name it ~/TestFolder.
-
-</br>
-Creating a TestFolder
+### 5. Identify a cmdlet that will show you all the times in a directory.
 
 ```powershell
-PS C:\Labs> New-Item -ItemType Directory -Name TestFolder
-```
-
-Creating the 10 files in the TestFolder.
-
-```powershell
-PS C:\Labs> 1..10 | ForEach-Object {New-Item -ItemType File -Name ("/TestFolder/$_.txt" -f $_)}
+PS C:\Labs> Get-ChildItem | Sort-Object CreationTime | Select-Object Name,CreationTime
 ```
 
 `output:`
 
 ```
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---          27/02/2023 12:40 am              0 1.txt
--a---          27/02/2023 12:40 am              0 2.txt
--a---          27/02/2023 12:40 am              0 3.txt
--a---          27/02/2023 12:40 am              0 4.txt
--a---          27/02/2023 12:40 am              0 5.txt
--a---          27/02/2023 12:40 am              0 6.txt
--a---          27/02/2023 12:40 am              0 7.txt
--a---          27/02/2023 12:40 am              0 8.txt
--a---          27/02/2023 12:40 am              0 9.txt
--a---          27/02/2023 12:40 am              0 10.txt
+Name               CreationTime
+----               ------------
+testing.ps1        26/02/2023 7:24:45 am
+TestFolder         27/02/2023 12:49:06 am
+processDetails.csv 27/02/2023 12:53:11 am
+process.csv        27/02/2023 12:53:21 am
+process.html       2/03/2023 9:31:12 pm
+20                 2/03/2023 10:01:24 pm
 ```
 
 ---
 
-### 6. Compress-Archive ~/TestFolder/\* -DestinationPath ~/TestFolder.zip
+### 6. Using the cmdlet from task 5, display all the times in the directory of your choice. Then extend the expression to sort the list by the time the items were created and display only the filename(s) and the date created. Remember that the column headers shown in a command’s default output aren’t necessarily the real property names—you need to look up the real property names to be sure.
 
 ```powershell
-PS C:\Labs> Compress-Archive ~/TestFolder/* -DestinationPath ~/TestFolder.zip
+PS C:\Labs> Get-ChildItem | select Name, CreationTime | sort-Object CreationTime -Descending 
+```
+
+`output:`
+
+```
+Name               CreationTime
+----               ------------
+20                 2/03/2023 10:01:24 pm
+process.html       2/03/2023 9:31:12 pm
+process.csv        27/02/2023 12:53:21 am
+processDetails.csv 27/02/2023 12:53:11 am
+TestFolder         27/02/2023 12:49:06 am
+testing.ps1        26/02/2023 7:24:45 am
 ```
 
 ---
 
-### 7. Expand-Archive ~/TestFolder.zip -DestinationPath ~/TestFolder2
+### 7. Repeat task 6, but this time sort the items by the last write time; then display the filename, creation time, and the last write time. Save this in a CSV file and an HTML file.
 
 ```powershell
-PS C:\Labs> Expand-Archive ~/TestFolder.zip -DestinationPath ~/TestFolder2
+PS C:\Labs>  Get-ChildItem | select  Name,LastWritetime,CreationTime | sort-Object CreationTime -Descending | Out-File listFiles.html
+```
+
+```powershell
+PS C:\Labs> Get-ChildItem | select  Name,LastWritetime,CreationTime | sort-Object CreationTime -Descending | export-CSV listFiles.csv
 ```
