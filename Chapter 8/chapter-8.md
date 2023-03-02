@@ -2,10 +2,28 @@
 
 ### 1. Identify a cmdlet that produces a random number.
 
+</br>Finding out the command.
 
 ```powershell
-PS C:\Labs> Install-Module -Name ConnectWiseAutomateAgent
-Install-Module -Name PSLANScan
+PS C:\Labs> Get-Command *random*
+```
+
+`output`
+
+```
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Random                                         7.0.0.0    Microsoft.PowerShell.Utility
+```
+
+```powershell
+PS C:\Labs> Get-Random
+```
+
+`output`
+
+```
+1973906388
 ```
 
 ---
