@@ -59,7 +59,7 @@ Thursday, 2 March 2023 10:38:25 pm
 
 ---
 
-### What type of object does the cmdlet from task 2 produce? (What is the TypeName of the object produced by the cmdlet?)
+### 3. What type of object does the cmdlet from task 2 produce? (What is the TypeName of the object produced by the cmdlet?)
 
 ```powershell
 PS C:\Labs> Get-Date | gm
@@ -77,38 +77,40 @@ Add                  Method         datetime Add(timespan value)
 
 ---
 
-### 4. Import the module you just installed.
+### 4. Using the cmdlet from task 2 and Select-Object, display only the current day of the week in a table like the following (caution: the output will right-align, so make sure your PowerShell window doesn’t have a horizontal scrollbar):
+
+```
+DayOfWeek
+---------
+   Monday
+```
+
+Find out the object property that we can use
 
 ```powershell
-&nbsp;
+PS C:\Labs> Get-Date | Get-Member -Name *week*
 ```
 
 `output:`
 
 ```
-ModuleType Version    PreRelease Name                                ExportedCommands
----------- -------    ---------- ----                                ----------------
-Binary     7.0.0.0               CimCmdlets                          {Get-CimAssociatedInstance, Get-CimClass, Get-CimInstanc…
-Script     0.1.2.0               ConnectWiseAutomateAgent            {ConvertFrom-CWAASecurity, ConvertTo-CWAASecurity, Get-C…
-Manifest   1.2.5                 Microsoft.PowerShell.Archive        {Compress-Archive, Expand-Archive}
-Manifest   7.0.0.0               Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-Item, Clear-ItemPrope…
-Manifest   7.0.0.0               Microsoft.PowerShell.Security       {ConvertFrom-SecureString, ConvertTo-SecureString, Get-A…
-Manifest   7.0.0.0               Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object…}
-Manifest   2.0.0.0               NetAdapter                          {Disable-NetAdapter, Disable-NetAdapterBinding, Disable-…
-Manifest   1.0.0.0               NetTCPIP                            {Find-NetRoute, Get-NetCompartment, Get-NetIPAddress, Ge…
-Script     1.4.8.1               PackageManagement                   {Find-Package, Find-PackageProvider, Get-Package, Get-Pa…
-Script     0.2.0                 PowerShellEditorServices.Commands   {Clear-Host, ConvertFrom-ScriptExtent, ConvertTo-ScriptE…
-Binary     0.2.0                 PowerShellEditorServices.VSCode     {Close-VSCodeHtmlContentView, New-VSCodeHtmlContentView,…
-Script     2.2.5                 PowerShellGet                       {Find-Command, Find-DscResource, Find-Module, Find-RoleC…
-Manifest   1.2.0                 PSLANScan                           {Find-LANHosts, Get-IPs}
-Script     2.2.6                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-…
+TypeName: System.DateTime
+
+Name      MemberType Definition
+----      ---------- ----------
+DayOfWeek Property   System.DayOfWeek DayOfWeek {get;}
 ```
 
-&nbsp;
-Then you can import it.
-
 ```powershell
-PS C:\Labs> Import-Module Microsoft.PowerShell.Archive
+PS C:\Labs> Get-Date | select DayOfWeek
+```
+
+`output:`
+
+```
+DayOfWeek
+---------
+ Thursday
 ```
 
 ---
