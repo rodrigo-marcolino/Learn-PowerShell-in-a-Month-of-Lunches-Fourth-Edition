@@ -68,3 +68,30 @@ Cmdlet          Test-SecretVault                                   1.1.2      Mi
 Cmdlet          Unlock-SecretVault                                 1.1.2      Microsoft.PowerShell.SecretManagement
 Cmdlet          Unregister-SecretVault                             1.1.2      Microsoft.PowerShell.SecretManagement
 ```
+
+`let see what Register-SecretVault does:`
+
+````
+```powershell
+PS C:\Labs> help Register-SecretVault -example
+````
+
+```
+NAME
+    Register-SecretVault
+
+SYNOPSIS
+
+    -------------------------- Example 1 --------------------------
+
+    PS C:\> Register-SecretVault -Name LocalStore -ModuleName Microsoft.PowerShell.SecretStore  -DefaultVault
+    PS C:\> Get-SecretVault
+
+    VaultName  ModuleName                        IsDefaultVault
+    ---------  ----------                        --------------
+    CredMan    Microsoft.PowerShell.CredManStore False
+    LocalStore Microsoft.PowerShell.SecretStore  True
+
+    This example registers the Microsoft.PowerShell.SecretStore extension vault module for the current user. The 'Microsoft.PowerShell.SecretStore' is installed in a known PowerShell module path, so just the module name is needed. It uses the
+    'DefaultVault' parameter switch to make it the default module for the user. The 'Get-SecretVault' command is run next to list all registered va is installed in a known PowerShell module path, so just the module name is needed. It uses the   ults for the user, and verifies the vault was registered and set as the default vault.
+```
