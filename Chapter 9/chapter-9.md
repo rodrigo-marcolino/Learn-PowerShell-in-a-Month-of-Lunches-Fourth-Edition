@@ -41,4 +41,30 @@ Version     Name                                    Repository Description
 1.0.3       SecretManagement.ExtensionTemplate      PSGallery  No
 ```
 
-`It seems the module is `
+`It seems the module is:` `Microsoft.PowerShell.SecretManagement`
+
+```powershell
+PS C:\Labs> Install-Module Microsoft.PowerShell.SecretManagement
+```
+
+`Let see what we got here:`
+
+```powershell
+PS C:\Labs> Get-Command -Module Microsoft.PowerShell.SecretManagement
+```
+
+```
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Secret                                         1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Get-SecretInfo                                     1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Get-SecretVault                                    1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Register-SecretVault                               1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Remove-Secret                                      1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Set-Secret                                         1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Set-SecretInfo                                     1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Set-SecretVaultDefault                             1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Test-SecretVault                                   1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Unlock-SecretVault                                 1.1.2      Microsoft.PowerShell.SecretManagement
+Cmdlet          Unregister-SecretVault                             1.1.2      Microsoft.PowerShell.SecretManagement
+```
