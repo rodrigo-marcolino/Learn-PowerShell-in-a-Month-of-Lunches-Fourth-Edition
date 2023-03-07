@@ -95,3 +95,45 @@ SYNOPSIS
     This example registers the Microsoft.PowerShell.SecretStore extension vault module for the current user. The 'Microsoft.PowerShell.SecretStore' is installed in a known PowerShell module path, so just the module name is needed. It uses the
     'DefaultVault' parameter switch to make it the default module for the user. The 'Get-SecretVault' command is run next to list all registered va is installed in a known PowerShell module path, so just the module name is needed. It uses the   ults for the user, and verifies the vault was registered and set as the default vault.
 ```
+
+`It seems you we need something else, because I got a error running the command:`
+
+```powershell
+Register-SecretVault -Name LocalStore -ModuleName Microsoft.PowerShell.SecretStore  -DefaultVault
+```
+
+`There is other module called Microsoft.powerShell.SecretStore. Let install it.`
+
+```powershell
+PS C:\Labs> Install-Module Microsoft.powerShell.SecretStore
+```
+
+`Let try again:`
+
+```powershell
+PS C:\Labs> Register-SecretVault -Name LocalStore -ModuleName Microsoft.PowerShell.SecretStore  -DefaultVaul
+```
+
+```powershell
+PS C:\Labs> Get-SecretVault
+```
+
+`Output:`
+
+```
+Name       ModuleName                       IsDefaultVault
+----       ----------                       --------------
+LocalStore Microsoft.PowerShell.SecretStore True
+```
+
+`Adding my Azure credentials:`
+
+```powerShell
+PS C:\Labs> Set-Secret -vault LocalStore -Name AzureAccount -Secret (Get-Credential)
+```
+
+`Using my AzureAccount credential to sign to Azure:`
+
+```powerShell
+Connect-AzureAD -Credential (Get-Secret -vault LocalStore -Name AzureAccount)
+```
