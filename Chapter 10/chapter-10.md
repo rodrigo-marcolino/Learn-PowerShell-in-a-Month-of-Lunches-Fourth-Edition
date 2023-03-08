@@ -53,3 +53,13 @@ Get-AzSubscription | Select-AzSubscription
 
 It seems working. As I have 3 subscriptions it's selecting the last one.
 If I run `Get-AzContext` I can see that selected the last subscription.
+
+---
+
+## 4. Write a command that uses pipeline parameter binding to retrieve the first subscription and set that in the Azure context. Don’t use parentheses.
+
+```powershell
+PS C:\Labs> Get-AzSubscription | Select-Object -First 1 | Set-AzContext
+```
+---
+## 5.
