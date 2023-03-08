@@ -44,3 +44,12 @@ Get-Module -ListAvailable -Name Microsoft.* | Get-Command
 No, it doesn't work:
 
 `Get-module` is producing objects of the type `ModuleInfoGrouping` and `Get-command` needs a type of System.String
+
+## 3. Would this set the subscription in the Azure context? Consider if `Get- AzSubcription` retrieves multiple subscriptions.
+
+```powershell
+Get-AzSubscription | Select-AzSubscription
+```
+
+It seems working. As I have 3 subscriptions it's selecting the last one.
+If I run `Get-AzContext` I can see that selected the last subscription.
