@@ -89,3 +89,28 @@ testing.ps1
 ```
 
 ---
+
+## 6. Create a formatted list of all .dll files in `$pshome`, displaying the name, version information, and file size. PowerShell uses the `Length` property, but to make it clearer, your output should show `Size`
+
+```powershell
+PS C:\Labs> Get-ChildItem $pshome/*.dll | Format-List Name,VersionInfo,@{Name="Size";Expression={$_.length}}
+```
+
+`output:`
+
+```
+Name        : Namotion.Reflection.dll
+VersionInfo : File:             C:\Program Files\PowerShell\7\Namotion.Reflection.dll
+              InternalName:     Namotion.Reflection.dll
+              OriginalFilename: Namotion.Reflection.dll
+              FileVersion:      2.1.1.0
+              FileDescription:  Namotion.Reflection
+              Product:          Namotion.Reflection
+              ProductVersion:   2.1.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Language Neutral
+```
