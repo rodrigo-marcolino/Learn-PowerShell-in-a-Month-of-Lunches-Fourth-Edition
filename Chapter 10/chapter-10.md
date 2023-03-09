@@ -71,3 +71,11 @@ PS C:\Labs> Set-AzContext (Get-AzSubscription | Select-Object -First 1)
 ```
 
 ---
+
+## 6. Sometimes someone forgets to add a pipeline parameter binding to a cmdlet. For example, would the following command work to set the subscription in the Azure context? Write an explanation, similar to the ones we provided earlier in this chapter.
+
+```
+'mySubscriptionName' | Select-AzSubscription
+```
+
+It doesn't work because `Select-AzSubscription` cmdlet expects an object of type `Microsoft.Azure.Commands.Profile.Models.PSAzureSubscription` as input, rather than a string value.
