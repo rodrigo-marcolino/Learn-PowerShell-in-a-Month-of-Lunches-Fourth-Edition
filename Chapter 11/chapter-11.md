@@ -61,3 +61,31 @@ Az.Aks                                5.3.0
 Az.AnalysisServices                   1.1.4
 ```
 
+---
+
+## 4. Use `Get-AzStorageAccount` and `Get-AzStorageContainer` to display all of your storage containers so that a separate table is displayed for storage containers that are accessible to the public and storage containers that are not. (Hint: Piping is your friend . . . use a `-GroupBy` parameter.)
+
+```powershell
+PS C:\Labs> Get-AzStorageAccount | Get-AzStorageContainer | Format-Table -GroupBy PublicAccess
+```
+
+---
+
+## 5 . Display a four-column-wide list of all directories in the home directory.
+
+```powershell
+PS C:\Labs> Get-ChildItem | Format-wide -Column 4
+```
+
+`output:`
+
+```
+ Directory: C:\Labs
+
+TestFolder                                              20                                                     allfiles.html                                          credscan.json
+credscan.yml                                            listFiles.csv                                          listFiles.html                                         password.xml
+process.csv                                             process.html                                           processDetails.csv                                     ps.txt
+testing.ps1
+```
+
+---
