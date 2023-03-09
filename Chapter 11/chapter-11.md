@@ -99,18 +99,20 @@ PS C:\Labs> Get-ChildItem $pshome/*.dll | Format-List Name,VersionInfo,@{Name="S
 `output:`
 
 ```
-Name        : Namotion.Reflection.dll
-VersionInfo : File:             C:\Program Files\PowerShell\7\Namotion.Reflection.dll
-              InternalName:     Namotion.Reflection.dll
-              OriginalFilename: Namotion.Reflection.dll
-              FileVersion:      2.1.1.0
-              FileDescription:  Namotion.Reflection
-              Product:          Namotion.Reflection
-              ProductVersion:   2.1.1
+Name        : msquic.dll
+VersionInfo : File:             C:\Program Files\PowerShell\7\msquic.dll
+              InternalName:     msquic
+              OriginalFilename: msquic.dll
+              FileVersion:      2.1.1.293818
+              FileDescription:  Microsoft® QUIC Library
+              Product:          Microsoft® QUIC
+              ProductVersion:   2.1.1.293818-official
               Debug:            False
               Patched:          False
               PreRelease:       False
               PrivateBuild:     False
               SpecialBuild:     False
-              Language:         Language Neutral
+              Language:         English (United States)
+
+Size        : 534416
 ```
