@@ -146,3 +146,23 @@ Mode                 LastWriteTime         Length Name
 -a---           8/03/2023 12:21 am            594 password.xml
 -a---          12/03/2023 12:23 am          10713 testing.ps1
 ```
+
+---
+
+## 6. Display a list of all processes running with either the name pwsh or the name bash.
+
+As I'm using Windows, I change bash to cmd
+
+```powershell
+PS C:\Labs> Get-Process -Name pwsh,cmd
+```
+
+`Output:`
+
+```
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      5     2.33       4.54       0.00   16684   1 cmd
+    219   385.98     574.68      74.20   13148   1 pwsh
+     66    29.03      87.12       1.27   22912   1 pwsh
+```
