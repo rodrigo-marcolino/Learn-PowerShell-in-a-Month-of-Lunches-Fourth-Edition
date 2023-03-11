@@ -129,3 +129,20 @@ Version              Name                                Repository           De
 ```
 
 ---
+
+## 5. Get the files in the current directory where the LastWriteTime is in the last week. (Hint: `(Get-Date).AddDays(-7)` will give you the date from a week ago.)
+
+```PowerShell
+PS C:\Labs> Get-ChildItem | where-object LastWriteTime -ge (get-date).AddDays(-7)
+```
+
+`Output:`
+
+```
+      Directory: C:\Labs
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           8/03/2023 12:21 am            594 password.xml
+-a---          12/03/2023 12:23 am          10713 testing.ps1
+```
