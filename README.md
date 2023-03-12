@@ -35,3 +35,4 @@ Thank you for visiting, and I hope you find the resources in this repository hel
 - 10 - [The Pipeline, Deeper](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%2010/chapter-10.md)
 - 11 - [Formatting: And Why It’s Done On The Right](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%2011/chapter-11.md)
 - 12 - [Filtering And Comparisons](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%2012/chapter-12.md)
+- 12 - [Remote Control: One-To-One And One-To-Many](https://github.com/rodrigo-marcolino/Learn-PowerShell-in-a-Month-of-Lunches-Fourth-Edition/blob/main/Chapter%2013/chapter-13.md)
