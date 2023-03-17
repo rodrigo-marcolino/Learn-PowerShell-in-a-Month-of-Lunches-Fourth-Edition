@@ -5,3 +5,5 @@
 ---
 ## 3. Use `Invoke-ScriptBlock` to get a list of the top 10 processes for virtual memory (VM) usage. Target one or two remote computers, if you can; if you have only one computer, target `localhost` twice.
 ---
+## 4. Create a text file that contains three computer names, with one name per line. It’s okay to use the same computer name, or `localhost`, three times if you have access to only one computer. Then use `Invoke-ScriptBlock` to retrieve the 10 newest files from the home directory (~).
+---
