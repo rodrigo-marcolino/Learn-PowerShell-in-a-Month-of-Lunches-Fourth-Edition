@@ -7,3 +7,4 @@
 ---
 ## 4. Create a text file that contains three computer names, with one name per line. It’s okay to use the same computer name, or `localhost`, three times if you have access to only one computer. Then use `Invoke-ScriptBlock` to retrieve the 10 newest files from the home directory (~).
 ---
+## 5. Using `Invoke-ScriptBlock`, query one or more remote computers to display the property `PSVersion` from the `$PSVersionTable` variable. (Hint: This requires you to get the property of an item.)
